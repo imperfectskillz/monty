@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	char *file_line = NULL;
 	char *token = NULL;
 	size_t size = 0;
-	unsigned int line_count = 1;
+	unsigned int line_number = 1;
 	stack_t *stack = NULL;
 
 	if (argc != 2)
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 		if (token != NULL)
 		{
 			op_func(token, &stack, file_line);
-			line_count++;
+			line_number++;
 		}
 	}
 	fclose(fp);

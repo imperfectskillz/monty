@@ -7,7 +7,7 @@
  *@line_number: line number of monty file
  */
 
-void get_func(char *token, stack_t **stack, unsigned int line_number)
+void get_func(char *function, stack_t **stack, unsigned int line_number)
 {
 	int i = 0;
 
@@ -24,12 +24,12 @@ void get_func(char *token, stack_t **stack, unsigned int line_number)
 
 	while (func[i].opcode != NULL)
 	{
-		if (strcmp(token, func[i].opcode) == 0)
+		if (strcmp(function, func[i].opcode) == 0)
 		{
 			func[i].f(stack, line_number);
 		}
 	}
 
-	printf("L%d: unknown instruction %s\n", line_number, token);
+	printf("L%d: unknown instruction %s\n", line_number, function);
 	exit(EXIT_FAILURE);
 }
