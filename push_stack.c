@@ -11,13 +11,14 @@ void push_stack(stack_t **stack, unsigned int line_number)
 	char *second_token;
 	int i = 0;
 	int n;
-
+	printf("hello");
 	second_token = strtok(NULL, "\n \t \r");
-	if (second_token == NULL || temp == NULL)
+	if (second_token == NULL)
 	{
 		printf("L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
+	printf("hello");
 	while (second_token[i] != '\0')
 	{
 		if (!isdigit(second_token[i]))

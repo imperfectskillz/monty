@@ -14,11 +14,11 @@ void get_func(char *function, stack_t **stack, unsigned int line_number)
 	instruction_t func[] = {
 		{"push", push_stack},
 		{"pall", pall_stack},
-		{"pint", pint_stack},
+		/*	{"pint", pint_stack},
 		{"pop", pop_stack},
 		{"swap", swap_stack},
 		{"add", add_stack},
-		{"nop", nop_stack},
+		{"nop", nop_stack}, */
 		{NULL, NULL}
 	};
 

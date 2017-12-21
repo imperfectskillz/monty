@@ -3,7 +3,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
+#include <ctype.h>
+#include <unistd.h>
 
 
 /**
@@ -34,5 +36,15 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+void pall_stack(stack_t **stack, unsigned int line_number);
+void push_stack(stack_t **stack, unsigned int line_number);
+void get_func(char *function, stack_t **stack, unsigned int line_number);
+void push_extended(stack_t **stack, int n);
+void pint_stack(stack_t **stack, unsigned int line_number);
+void pop_stack(stack_t **stack, unsigned int line_number);
+void swap_stack(stack_t **stack, unsigned int line_number);
+void add_stack(stack_t **stack, unsigned int line_number);
+void nop_stack(stack_t **stack, unsigned int line_number);
 
 #endif

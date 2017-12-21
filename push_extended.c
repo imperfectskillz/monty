@@ -17,18 +17,19 @@ void push_extended(stack_t **stack, int n)
 		printf("Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
+	printf("hello");
 	if (*stack == NULL)
 	{
-		new->prev = NULL;
-		new->next = *stack;
-		new->n = n;
+		temp->prev = NULL;
+		temp->next = *stack;
+		temp->n = n;
 	}
-	if (*stack != NULL)
+	else
 	{
-		new->prev = NULL;
-		new->next = *stack;
-		new->n = n;
-		*stack->prev = new;
+		temp->prev = NULL;
+		temp->next = *stack;
+		temp->n = n;
+		(*stack)->prev = temp;
 	}
-	*stack = new;
+	*stack = temp;
 }
