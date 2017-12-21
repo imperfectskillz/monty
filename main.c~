@@ -1,0 +1,15 @@
+#include "monty.h"
+
+/**
+ *main - this is the file that launches and runs monty. opens, reads, tokenizes
+ * then executes
+ *@argc: number of arguments
+ *@argv: arguments
+ *Return: 0
+ */
+
+int main(int argc, char *argv[])
+{
+	if (argc != 2)
+	{
+		
