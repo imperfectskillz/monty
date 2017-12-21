@@ -27,7 +27,9 @@ void get_func(char *function, stack_t **stack, unsigned int line_number)
 		if (strcmp(function, func[i].opcode) == 0)
 		{
 			func[i].f(stack, line_number);
+			return;
 		}
+		i++;
 	}
 
 	printf("L%d: unknown instruction %s\n", line_number, function);

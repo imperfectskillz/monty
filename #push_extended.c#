@@ -10,14 +10,14 @@
 void push_extended(stack_t **stack, int n)
 {
 	stack_t *temp;
-
+	printf("helo\n");
 	temp = malloc(sizeof(stack_t));
 	if (temp == NULL)
 	{
 		printf("Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-
+	printf("hello");
 	temp->n = n;
 	temp->prev = NULL;
 	temp->next = *stack;

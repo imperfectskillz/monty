@@ -8,25 +8,36 @@
 
 void push_stack(stack_t **stack, unsigned int line_number)
 {
-	char *second_token;
-	int i = 0;
-	int n;
-	printf("hello");
-	second_token = strtok(NULL, "\n \t \r");
-	if (second_token == NULL)
+/*	char *tokenized = strtok(NULL, "\n\t ");*/
+/*	int i = 0;
+ */	int n;
+/*	if (tokenized == NULL)
+	{
+		exit(EXIT_FAILURE);
+		} */
+/*	printf("%d\n", atoi(tokenized));
+ */	/*	if (second_token == NULL)
 	{
 		printf("L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	printf("hello");
-	while (second_token[i] != '\0')
+*/	
+	if (!check_digits(second_token))
 	{
-		if (!isdigit(second_token[i]))
+		printf("fail %d\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+/*	while (*second_token)
+	{
+		if (!isdigit(*second_token))
 		{
 			printf("L%d: usage: push integer\n", line_number);
 			exit(EXIT_FAILURE);
 		}
+		second_token++;
 	}
-	n = atoi(second_token);
+*/	n = atoi(second_token);
+
 	push_extended(stack, n);
+
 }
