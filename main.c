@@ -40,7 +40,6 @@ int main(int argc, char *argv[])
 		line_number++;
 	}
 	clear(stack);
-	free(line);
 	fclose(fp);
 	exit(EXIT_SUCCESS);
 }
