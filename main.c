@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
 		}
 		line_number++;
 	}
+	free(file_line);
 	clear(stack);
 	fclose(fp);
 	exit(EXIT_SUCCESS);
