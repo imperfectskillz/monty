@@ -24,4 +24,5 @@ void push_extended(stack_t **stack, int n)
 	if ((*stack) != NULL)
 		(*stack)->prev = temp;
 	*stack = temp;
+	free(temp);
 }

@@ -21,10 +21,10 @@ void push_stack(stack_t **stack, unsigned int line_number)
 		printf("L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-*/	
+*/
 	if (!check_digits(second_token))
 	{
-		printf("fail %d\n", line_number);
+		printf("L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 /*	while (*second_token)

@@ -31,7 +31,6 @@ int main(int argc, char *argv[])
 	while (getline(&file_line, &size, fp) != -1)
 	{
 		token = strtok(file_line, "\n\t ");
-	
 		second_token = strtok(NULL, "\n\t ");
 		if (token != NULL)
 		{
